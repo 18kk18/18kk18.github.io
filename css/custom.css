@@ -1,0 +1,85 @@
+/* ====== 视频背景 ====== */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: url("/img/bg.jpg") center/cover no-repeat !important;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;         /* 刚加载时隐藏视频 */
+  transition: opacity 0.5s ease; /* 平滑出现 */
+  /* 核心：强制高清渲染，关闭浏览器压缩 */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+  /* 防止视频被拉伸模糊 */
+  transform: translateZ(0) scale(1.0001);
+  will-change: transform;
+}
+
+
+
+/* 强制关掉主题自带遮罩 */
+#page-header.full_page::before {
+  display: none !important;
+}
+
+/* 副标题 */
+#site-subtitle {
+  font-size: 52px !important;
+  color: white !important;
+  font-weight: 700;
+  text-shadow: 0 5px 20px rgba(0,0,0,0.7) !important;
+}
+
+
+
+/* 箭头 */
+#scroll-down {
+  position: absolute;
+  bottom: 50px !important;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+.scroll-down-effects {
+  font-size: 40px !important;
+  color: white;
+  animation: float 1.5s infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(10px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.5; }
+}
+
+#logo img {
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+#page-header.full_page {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+#site-title {
+  display: none !important;
+}
+
+/* 卡片整体背景色 */
+.card-info {
+  background: #dff1fc !important;
+  border-radius: 16px !important; /* 保持圆角，可选 */
+}
