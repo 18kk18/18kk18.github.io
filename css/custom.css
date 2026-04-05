@@ -83,3 +83,16 @@
   background: #dff1fc !important;
   border-radius: 16px !important; /* 保持圆角，可选 */
 }
+
+/* ==================================== */
+/* ✅ 强制所有页面顶部显示 blog5.jpeg */
+/* ==================================== */
+#page-header:not(.full_page) {
+  background: url(/img/blog0.jpeg) center/cover !important;
+  background-color: transparent !important;
+}
+
+/* 去掉遮罩，彻底不蓝 */
+#page-header:not(.full_page)::before {
+  display: none !important;
+}
