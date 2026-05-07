@@ -88,7 +88,7 @@
 /* ✅ 强制所有页面顶部显示 blog5.jpeg */
 /* ==================================== */
 #page-header:not(.full_page) {
-  background: url(/img/blog0.jpeg) center/cover !important;
+  background: url(/img/bg.jpg) center/cover !important;
   background-color: transparent !important;
 }
 
